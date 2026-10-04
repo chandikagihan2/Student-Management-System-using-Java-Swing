@@ -81,7 +81,7 @@ class Student{
 	
 	}
 
-    private static Student[] studentArray  = new Student[] {
+    public  static Student[] studentArray  = new Student[] {
         new Student("PR24105001", "199501012345", "Gunawardena Weerasinghe", 85, 66),
         new Student("PR24105002", "199503153872", "Senanayake Silva", 39, 45),
         new Student("PR24105003", "199506202198", "Silva Kumara", -1, 93),
@@ -233,4 +233,12 @@ class Student{
         new Student("OR24110024", "199511223344", "Weerasinghe Rajapaksha", -2, -2),
         new Student("PR24110025", "200412345678", "Karunaratne Abeysekera", -2, -2)
     };
+
+    public static Student[] getStudentArray() {
+    return studentArray;
+    }
+
+    public int getBatchNo() {
+    return Integer.parseInt(regNo.substring(4, 7));
+}
 }
