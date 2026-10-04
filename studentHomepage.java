@@ -41,9 +41,19 @@ class studentHomepage extends JFrame{
         btn1.setBounds(75, 140, 300, 40);
         panel.add(btn1);
 
+        btn1.addActionListener(e -> {
+            new StudentManagementSystem().setVisible(true);
+              dispose();
+        });
+
         JButton btn2 = new JButton("Batch Management");
         btn2.setBounds(75, 200, 300, 40);
         panel.add(btn2);
+
+        btn2.addActionListener(e -> {
+            new BatchManagementSystem().setVisible(true);
+            dispose();
+        });
 
         JButton btn3 = new JButton("Grade Management");
         btn3.setBounds(75, 260, 300, 40);
