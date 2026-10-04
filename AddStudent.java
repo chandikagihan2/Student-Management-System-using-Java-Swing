@@ -103,11 +103,26 @@ class AddStudent extends JFrame {
                 if(isClosed) {
                     JOptionPane.showMessageDialog(this, "Student can not be added to this batch because enrollment is closed!", "ERROR", JOptionPane.WARNING_MESSAGE);
                 } else {
-                    JOptionPane.showMessageDialog(this, "Student added successfully!");
+                    int StudentCount=0;
+
+                    if(Student.getStudentArray() != null) {
+                        for (Student student : Student.getStudentArray()) {
+                            if (student != null && student.getBatchNo() == selectedBatchNo) {
+                                StudentCount++;
+                            }
+                        }
+                    }
+                    int nextStudentId = StudentCount + 1;
+                    String prefix = "Online".equals(mode) ? "OR" : "PR";
+                    String generatedStudentID = String.format("%s24%d%03d", prefix, selectedBatchNo, nextStudentId);
+
+                    String selectedBatchStr = (String) cmbBatch.getSelectedItem();
+                    String Mode = (String) cmbMode.getSelectedItem();
+                    new showSuccessAddStudent(this, generatedStudentID, name, selectedBatchStr, Mode).setVisible(true);
+                    dispose();
                 }
             }
         });
-
         btnCancel.addActionListener(e -> {
             dispose();
         });

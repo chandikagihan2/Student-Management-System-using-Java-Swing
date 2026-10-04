@@ -34,6 +34,11 @@ public class StudentManagementSystem extends JFrame {
         addStudentButton.setBounds(75, 140, 300, 40);
         panel.add(addStudentButton);
 
+        addStudentButton.addActionListener(e -> {
+            new AddStudent().setVisible(true);
+            dispose();
+        });
+
         JButton viewStudentsButton = new JButton("View Students");
         viewStudentsButton.setBounds(75, 200, 300, 40);
         panel.add(viewStudentsButton);
@@ -47,7 +52,7 @@ public class StudentManagementSystem extends JFrame {
         panel.add(deleteStudentButton);
 
         JButton btnBack = new JButton("GO to Homepage");
-        btnBack.setBounds(75, 390, 100, 30);
+        btnBack.setBounds(15, 390, 130, 30);
         btnBack.setBackground(Color.GRAY);
         btnBack.setForeground(Color.BLACK);
         panel.add(btnBack);
