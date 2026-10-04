@@ -1,0 +1,6 @@
+/**
+ * BatchManagementSystem
+ */
+public class BatchManagementSystem {
+    
+}
