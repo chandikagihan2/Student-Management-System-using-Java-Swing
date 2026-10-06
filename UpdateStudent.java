@@ -139,7 +139,7 @@ public class UpdateStudent extends JFrame {
     });
 
         btnCancel.addActionListener(e -> {
-            new studentHomepage(){}.setVisible(true);
+            new StudentManagementSystem(){}.setVisible(true);
             dispose();
         });
 

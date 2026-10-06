@@ -8,18 +8,18 @@ class AddStudent extends JFrame {
      */
     public AddStudent() {
         setTitle("Add Student");
-        setSize(750, 480);
+        setSize(750, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
 
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 450, 480);
+        panel.setBounds(0, 0, 750, 500);
         panel.setBackground(new Color(245, 247, 250));
         panel.setLayout(null);
 
         JPanel topPanel = new JPanel();
-        topPanel.setBounds(0, 0, 450, 50);
+        topPanel.setBounds(0, 0, 750, 50);
         topPanel.setBackground(new Color(25, 35, 110));
         topPanel.setLayout(null);
 
@@ -124,7 +124,7 @@ class AddStudent extends JFrame {
             }
         });
         btnCancel.addActionListener(e -> {
-             new studentHomepage(){}.setVisible(true);
+             new StudentManagementSystem(){}.setVisible(true);
             dispose();
         });
 

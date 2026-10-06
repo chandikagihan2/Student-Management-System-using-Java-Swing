@@ -15,7 +15,7 @@ class studentHomepage extends JFrame{
         setLayout(null);
 
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 450, 500);
+        panel.setBounds(0, 0, 750, 500);
         panel.setBackground(new Color(25, 35, 110));
         panel.setLayout(null);
 
