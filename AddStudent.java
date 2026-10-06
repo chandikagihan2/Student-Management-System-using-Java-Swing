@@ -8,7 +8,7 @@ class AddStudent extends JFrame {
      */
     public AddStudent() {
         setTitle("Add Student");
-        setSize(450, 480);
+        setSize(750, 480);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
@@ -124,6 +124,7 @@ class AddStudent extends JFrame {
             }
         });
         btnCancel.addActionListener(e -> {
+             new studentHomepage(){}.setVisible(true);
             dispose();
         });
 
