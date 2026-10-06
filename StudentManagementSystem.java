@@ -61,6 +61,11 @@ public class StudentManagementSystem extends JFrame {
         deleteStudentButton.setBounds(75, 320, 300, 40);
         panel.add(deleteStudentButton);
 
+        deleteStudentButton.addActionListener(e -> {
+            new DeleteStudent().setVisible(true);
+            dispose();
+        });
+
         JButton btnBack = new JButton("GO to Homepage");
         btnBack.setBounds(15, 390, 130, 30);
         btnBack.setBackground(Color.GRAY);
