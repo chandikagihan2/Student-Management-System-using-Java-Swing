@@ -8,7 +8,7 @@ public class StudentManagementSystem extends JFrame {
      */
     public StudentManagementSystem() {
         setTitle("Student Management System");
-        setSize(450, 500);
+        setSize(750, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
@@ -46,6 +46,11 @@ public class StudentManagementSystem extends JFrame {
         JButton updateStudentButton = new JButton("Update Student");
         updateStudentButton.setBounds(75, 260, 300, 40);
         panel.add(updateStudentButton);
+
+        updateStudentButton.addActionListener(e -> {
+            new UpdateStudent().setVisible(true);
+            dispose();
+        });
 
         JButton deleteStudentButton = new JButton("Delete Student");
         deleteStudentButton.setBounds(75, 320, 300, 40);

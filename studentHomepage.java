@@ -9,7 +9,7 @@ class studentHomepage extends JFrame{
     studentHomepage() {
         
         setTitle("iCET Learning Management System");
-        setSize(450, 500);
+        setSize(750, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
