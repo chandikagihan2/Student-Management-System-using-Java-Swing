@@ -43,6 +43,11 @@ public class StudentManagementSystem extends JFrame {
         viewStudentsButton.setBounds(75, 200, 300, 40);
         panel.add(viewStudentsButton);
 
+        viewStudentsButton.addActionListener(e -> {
+            new ViewStudentProfile().setVisible(true);
+            dispose();
+        });
+
         JButton updateStudentButton = new JButton("Update Student");
         updateStudentButton.setBounds(75, 260, 300, 40);
         panel.add(updateStudentButton);

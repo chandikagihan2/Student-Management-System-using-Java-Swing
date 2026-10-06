@@ -238,7 +238,7 @@ class Student{
     return studentArray;
     }
 
-    public int getBatchNo() {
+    public double getBatchNo() {
     return Integer.parseInt(regNo.substring(4, 7));
-}
+    }
 }
