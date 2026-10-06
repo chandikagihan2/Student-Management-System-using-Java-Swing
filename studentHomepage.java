@@ -50,10 +50,10 @@ class studentHomepage extends JFrame{
         btn2.setBounds(75, 200, 300, 40);
         panel.add(btn2);
 
-      /* btn2.addActionListener(e -> {
+         btn2.addActionListener(e -> {
             new BatchManagementSystem().setVisible(true);
             dispose();
-        });*/
+        });
 
         JButton btn3 = new JButton("Grade Management");
         btn3.setBounds(75, 260, 300, 40);
