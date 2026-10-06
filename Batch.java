@@ -39,4 +39,16 @@ class Batch{
         new Batch(110, ENROLLMENT_OPEN) 
     };
 
+    public static Batch[] getBatchNameArray() {
+        return batchNameArray;
+    }
+
+    public static void addBatch(Batch newBatch) {
+        for (int i = 0; i < batchNameArray.length; i++) {
+            if (batchNameArray[i] == null) {
+                batchNameArray[i] = newBatch;
+                return;
+            }
+        }
+    }
 }
