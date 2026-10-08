@@ -1,4 +1,6 @@
+import java.awt.*;
 import javax.swing.*;
+
 public class PrfMarksUpdate extends JFrame {
     private JTextField txtSearchId;
     private JTextField txtName;
