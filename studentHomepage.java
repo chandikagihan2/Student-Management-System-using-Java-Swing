@@ -59,6 +59,11 @@ class studentHomepage extends JFrame{
         btn3.setBounds(75, 260, 300, 40);
         panel.add(btn3);
 
+        btn3.addActionListener(e -> {
+            new GradeManagement().setVisible(true);
+            dispose();
+        });
+
         JButton btn4 = new JButton("Report Generator");
         btn4.setBounds(75, 320, 300, 40);
         panel.add(btn4);
