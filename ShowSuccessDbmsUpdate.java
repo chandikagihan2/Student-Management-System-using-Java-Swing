@@ -1,9 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class ShowSuccessPrfUpdate extends JFrame {
+public class ShowSuccessDbmsUpdate extends JFrame {
 
-    public ShowSuccessPrfUpdate(JFrame parentFrame, String studentId) {
+    public ShowSuccessDbmsUpdate(JFrame parentFrame, String studentId) {
         setTitle("Marks Updated Successfully");
         setSize(750, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -32,8 +32,8 @@ public class ShowSuccessPrfUpdate extends JFrame {
         btnBackHome.setBounds(40, 400, 210, 35);
         btnBackHome.setBackground(new Color(25, 35, 110));
         btnBackHome.setForeground(Color.WHITE);
-        btnBackHome.setFocusPainted(false);
         
+        btnBackHome.setFocusPainted(false);
         btnBackHome.addActionListener(e -> {
             new StudentManagementSystem().setVisible(true);
             dispose();
@@ -47,9 +47,10 @@ public class ShowSuccessPrfUpdate extends JFrame {
         btnUpdateAnother.setFocusPainted(false);
         
         btnUpdateAnother.addActionListener(e -> {
-            new PrfMarksUpdate().setVisible(true);
+            new DbmsMarksUpdate().setVisible(true);
             dispose();
         });
+        
         mainPanel.add(btnUpdateAnother);
         add(mainPanel);
     }
