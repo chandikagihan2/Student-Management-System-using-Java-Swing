@@ -4,7 +4,7 @@ import javax.swing.*;
 public class ShowSuccessDbmsUpdate extends JFrame {
 
     public ShowSuccessDbmsUpdate(JFrame parentFrame, String studentId) {
-        setTitle("Marks Updated Successfully");
+        setTitle("DBMS Marks Updated Successfully");
         setSize(750, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(parentFrame);
@@ -20,7 +20,7 @@ public class ShowSuccessDbmsUpdate extends JFrame {
         whiteCardPanel.setBackground(Color.WHITE);
         whiteCardPanel.setLayout(null);
 
-        JLabel lblMsg = new JLabel(studentId + " Student's Marks Successfully Updated!", JLabel.CENTER);
+        JLabel lblMsg = new JLabel(studentId + "DBMS Marks Successfully Updated!", JLabel.CENTER);
         lblMsg.setBounds(20, 70, 580, 30);
         lblMsg.setForeground(new Color(25, 35, 110));
         lblMsg.setFont(new Font("Arial", Font.BOLD, 20));
@@ -47,7 +47,7 @@ public class ShowSuccessDbmsUpdate extends JFrame {
         btnUpdateAnother.setFocusPainted(false);
         
         btnUpdateAnother.addActionListener(e -> {
-            new DbmsMarksUpdate().setVisible(true);
+            new UpdateDbmsMarks().setVisible(true);
             dispose();
         });
         

@@ -36,7 +36,7 @@ public class GradeManagement extends JFrame {
         
         
         btnPrfMarks.addActionListener(e -> {
-            new PrfMarksUpdate().setVisible(true);
+            new UpdatePrfMarks().setVisible(true);
             dispose();
         });
         mainPanel.add(btnPrfMarks);
@@ -49,7 +49,7 @@ public class GradeManagement extends JFrame {
         btnDbmsMarks.setFocusPainted(false);
         
         btnDbmsMarks.addActionListener(e -> {
-            new DbmsMarksUpdate().setVisible(true);
+            new UpdateDbmsMarks().setVisible(true);
             dispose();
         });
         mainPanel.add(btnDbmsMarks);

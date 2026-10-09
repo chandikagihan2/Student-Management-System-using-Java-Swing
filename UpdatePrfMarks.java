@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class PrfMarksUpdate extends JFrame {
+public class UpdatePrfMarks extends JFrame {
     private JTextField txtSearchId;
     private JTextField txtName;
     private JTextField txtNic;
@@ -11,8 +11,10 @@ public class PrfMarksUpdate extends JFrame {
     private JButton btnSearch;
     private JButton btnUpdate;
     private JButton btnCancel;
+    
+    private Student currentStudent = null;
 
-    public PrfMarksUpdate() {
+    public UpdatePrfMarks() {
         setTitle("PRF Marks Update");
         setSize(750, 500);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -99,18 +101,28 @@ public class PrfMarksUpdate extends JFrame {
 
         btnSearch.addActionListener(e -> {
             String studentId = txtSearchId.getText().trim();
+            currentStudent = null;
+
             if (studentId.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Please enter Student ID!", "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
-            if (studentId.equals("PR24105003")) {
-                txtName.setText("Silva Kumara");
-                txtNic.setText("199501012345");
-                txtCurrentMarks.setText("85");
-            } else if (studentId.equals("PR24100020")) {
-                txtName.setText("Silva Rajapaksha");
-                txtNic.setText("199501012345");
-                txtCurrentMarks.setText("ABSENT");
+
+            for (Student s : Student.getStudentArray()) {
+                if (s != null && s.getRegNo().equalsIgnoreCase(studentId)) {
+                    currentStudent = s;
+                    break;
+                }
+            }
+
+            if (currentStudent != null) {
+                txtName.setText(currentStudent.getName());
+                txtNic.setText(currentStudent.getNic());
+                if (currentStudent.getPrfMarks() == -1) {
+                    txtCurrentMarks.setText("ABSENT");
+                } else {
+                    txtCurrentMarks.setText(String.valueOf(currentStudent.getPrfMarks()));
+                }
             } else {
                 JOptionPane.showMessageDialog(this, "This student does not exist in the system.", "Error", JOptionPane.ERROR_MESSAGE);
                 txtName.setText("");
@@ -120,10 +132,9 @@ public class PrfMarksUpdate extends JFrame {
         });
 
         btnUpdate.addActionListener(e -> {
-            String studentId = txtSearchId.getText().trim();
             String newMarksStr = txtNewMarks.getText().trim();
 
-            if (studentId.isEmpty() || txtName.getText().isEmpty()) {
+            if (currentStudent == null) {
                 JOptionPane.showMessageDialog(this, "Please search and select a student first!", "Warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
@@ -146,7 +157,9 @@ public class PrfMarksUpdate extends JFrame {
                 return;
             }
 
-            new ShowSuccessPrfUpdate(this, studentId).setVisible(true);
+            currentStudent.setPrfMarks(newMarks);
+
+            new ShowSuccessPrfUpdate(this, currentStudent.getRegNo()).setVisible(true);
             dispose();
         });
 
