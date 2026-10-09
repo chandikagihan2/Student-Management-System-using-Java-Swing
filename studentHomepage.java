@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 class studentHomepage extends JFrame{
 
@@ -20,25 +20,25 @@ class studentHomepage extends JFrame{
         panel.setLayout(null);
 
         JLabel lblTitle1 = new JLabel("iCET", JLabel.CENTER);
-        lblTitle1.setBounds(50, 25, 350, 25);
+        lblTitle1.setBounds(0, 20, 750, 25);
         lblTitle1.setForeground(Color.WHITE);
         lblTitle1.setFont(new Font("", 1, 22));
         panel.add(lblTitle1); 
 
         JLabel lblTitle2 = new JLabel("Learning Management System", JLabel.CENTER);
-        lblTitle2.setBounds(50, 55, 350, 25);
+        lblTitle2.setBounds(0, 70, 750, 25);
         lblTitle2.setForeground(Color.WHITE);
         lblTitle2.setFont(new Font("", Font.BOLD, 20));
         panel.add(lblTitle2);
 
         JLabel lblSubTitle = new JLabel("Choose an option from the menu below to get started", JLabel.CENTER);
-        lblSubTitle.setBounds(50, 90, 350, 20);
+        lblSubTitle.setBounds(0, 110, 750, 25);
         lblSubTitle.setForeground(new Color(200, 215, 240));
         lblSubTitle.setFont(new Font("", Font.PLAIN, 12));
         panel.add(lblSubTitle);
 
         JButton btn1 = new JButton("Student Management");
-        btn1.setBounds(75, 140, 300, 40);
+        btn1.setBounds(175, 190, 400,40);
         panel.add(btn1);
 
         btn1.addActionListener(e -> {
@@ -47,7 +47,7 @@ class studentHomepage extends JFrame{
         });
 
         JButton btn2 = new JButton("Batch Management");
-        btn2.setBounds(75, 200, 300, 40);
+        btn2.setBounds(175, 240, 400, 40);
         panel.add(btn2);
 
          btn2.addActionListener(e -> {
@@ -56,7 +56,7 @@ class studentHomepage extends JFrame{
         });
 
         JButton btn3 = new JButton("Grade Management");
-        btn3.setBounds(75, 260, 300, 40);
+        btn3.setBounds(175, 290, 400, 40);
         panel.add(btn3);
 
         btn3.addActionListener(e -> {
@@ -65,7 +65,7 @@ class studentHomepage extends JFrame{
         });
 
         JButton btn4 = new JButton("Report Generator");
-        btn4.setBounds(75, 320, 300, 40);
+        btn4.setBounds(175, 340, 400, 40);
         panel.add(btn4);
 
         JButton btnExit = new JButton("Exit");
