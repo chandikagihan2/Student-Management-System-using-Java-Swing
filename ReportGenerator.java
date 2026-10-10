@@ -61,7 +61,8 @@ public class ReportGenerator extends JFrame {
         btnTrainingReport.setFocusPainted(false);
         
         btnTrainingReport.addActionListener(e -> {
-            JOptionPane.showMessageDialog(this, "Opening Industry Training Eligibility Report...");
+            new IndustryTrainingReport().setVisible(true);
+            dispose();          
         });
         mainPanel.add(btnTrainingReport);
 
