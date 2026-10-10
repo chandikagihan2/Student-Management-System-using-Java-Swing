@@ -68,6 +68,11 @@ class studentHomepage extends JFrame{
         btn4.setBounds(175, 340, 400, 40);
         panel.add(btn4);
 
+        btn4.addActionListener(e -> {
+            new ReportGenerator().setVisible(true);
+            dispose();
+        });
+
         JButton btnExit = new JButton("Exit");
         btnExit.setBounds(175, 390, 100, 30);
         btnExit.setBackground(Color.GRAY);
