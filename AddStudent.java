@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 class AddStudent extends JFrame {
 
@@ -46,7 +46,7 @@ class AddStudent extends JFrame {
         panel.add(lblNic);
 
         JTextField txtNic = new JTextField();
-        txtNic.setBounds(150, 130, 250, 30);
+        txtNic.setBounds(150, 130, 400, 30);
         panel.add(txtNic);
 
         JLabel lblName = new JLabel("Name");
@@ -55,7 +55,7 @@ class AddStudent extends JFrame {
         panel.add(lblName);
 
         JTextField txtName = new JTextField();
-        txtName.setBounds(150, 180, 250, 30);
+        txtName.setBounds(150, 180, 400, 30);
         panel.add(txtName);
 
         JLabel lblMode = new JLabel("Lecturer Mode");
@@ -69,13 +69,13 @@ class AddStudent extends JFrame {
         panel.add(cmbMode);
 
         JButton btnCancel = new JButton("CANCEL");
-        btnCancel.setBounds(170, 350, 100, 35);
+        btnCancel.setBounds(170, 350, 200, 35);
         btnCancel.setBackground(new Color(150, 155, 170));
         btnCancel.setForeground(Color.WHITE);
         panel.add(btnCancel);
 
         JButton btnAdd = new JButton("ADD STUDENT");
-        btnAdd.setBounds(280, 350, 120, 35);
+        btnAdd.setBounds(380, 350, 220, 35);
         btnAdd.setBackground(new Color(25, 35, 110));
         btnAdd.setForeground(Color.WHITE);
         panel.add(btnAdd);

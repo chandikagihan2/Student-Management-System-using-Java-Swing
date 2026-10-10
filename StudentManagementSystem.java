@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class StudentManagementSystem extends JFrame {
 
@@ -19,19 +19,19 @@ public class StudentManagementSystem extends JFrame {
         panel.setLayout(null);
 
         JLabel lblTitle = new JLabel("Student Management System", JLabel.CENTER);
-        lblTitle.setBounds(50, 25, 350, 25);
+        lblTitle.setBounds(0, 60, 750, 40);
         lblTitle.setForeground(Color.WHITE);
         lblTitle.setFont(new Font("", 1, 22));
         panel.add(lblTitle); 
 
         JLabel lblSubTitle = new JLabel("Choose an option from the menu below to get started", JLabel.CENTER);
-        lblSubTitle.setBounds(50, 90, 350, 20);
+        lblSubTitle.setBounds(0, 110, 750, 25);
         lblSubTitle.setForeground(new Color(200, 215, 240));
         lblSubTitle.setFont(new Font("", Font.PLAIN, 12));
         panel.add(lblSubTitle);
 
         JButton addStudentButton = new JButton("Add Student");
-        addStudentButton.setBounds(75, 140, 300, 40);
+        addStudentButton.setBounds(175, 170, 400, 40);
         panel.add(addStudentButton);
 
         addStudentButton.addActionListener(e -> {
@@ -40,7 +40,7 @@ public class StudentManagementSystem extends JFrame {
         });
 
         JButton viewStudentsButton = new JButton("View Students");
-        viewStudentsButton.setBounds(75, 200, 300, 40);
+        viewStudentsButton.setBounds(175, 220, 400, 40);
         panel.add(viewStudentsButton);
 
         viewStudentsButton.addActionListener(e -> {
@@ -49,7 +49,7 @@ public class StudentManagementSystem extends JFrame {
         });
 
         JButton updateStudentButton = new JButton("Update Student");
-        updateStudentButton.setBounds(75, 260, 300, 40);
+        updateStudentButton.setBounds(175, 270, 400, 40);
         panel.add(updateStudentButton);
 
         updateStudentButton.addActionListener(e -> {
@@ -58,7 +58,7 @@ public class StudentManagementSystem extends JFrame {
         });
 
         JButton deleteStudentButton = new JButton("Delete Student");
-        deleteStudentButton.setBounds(75, 320, 300, 40);
+        deleteStudentButton.setBounds(175, 320, 400, 40);
         panel.add(deleteStudentButton);
 
         deleteStudentButton.addActionListener(e -> {

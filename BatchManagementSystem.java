@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class BatchManagementSystem extends JFrame {
 
@@ -19,19 +19,19 @@ public class BatchManagementSystem extends JFrame {
         panel.setLayout(null);
 
         JLabel lblTitle = new JLabel("Batch Management System", JLabel.CENTER);
-        lblTitle.setBounds(50, 25, 350, 25);
+        lblTitle.setBounds(0, 60, 750, 40);
         lblTitle.setForeground(Color.WHITE);
         lblTitle.setFont(new Font("", 1, 22));
         panel.add(lblTitle); 
 
         JLabel lblSubTitle = new JLabel("Choose an option from the menu below to get started", JLabel.CENTER);
-        lblSubTitle.setBounds(50, 90, 350, 20);
+        lblSubTitle.setBounds(0, 110, 750, 25);
         lblSubTitle.setForeground(new Color(200, 215, 240));
         lblSubTitle.setFont(new Font("", Font.PLAIN, 12));
         panel.add(lblSubTitle);
 
         JButton addBatchButton = new JButton("Add Batch");
-        addBatchButton.setBounds(75, 140, 300, 40);
+        addBatchButton.setBounds(175, 190, 400, 40);
         panel.add(addBatchButton);
 
         addBatchButton.addActionListener(e -> {
@@ -40,7 +40,7 @@ public class BatchManagementSystem extends JFrame {
         });
 
         JButton viewBatchesButton = new JButton("View Batches");
-        viewBatchesButton.setBounds(75, 200, 300, 40);
+        viewBatchesButton.setBounds(175, 240, 400, 40);
         panel.add(viewBatchesButton);
 
         viewBatchesButton.addActionListener(e -> {
@@ -49,7 +49,7 @@ public class BatchManagementSystem extends JFrame {
         });
 
         JButton updateBatchButton = new JButton("Update Batch");
-        updateBatchButton.setBounds(75, 260, 300, 40);
+        updateBatchButton.setBounds(175, 290, 400, 40);
         panel.add(updateBatchButton);
 
         updateBatchButton.addActionListener(e -> {
