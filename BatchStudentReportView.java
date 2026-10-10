@@ -1,6 +1,6 @@
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 
 public class BatchStudentReportView extends JFrame {
 
@@ -42,8 +42,24 @@ public class BatchStudentReportView extends JFrame {
             int index = 1;
             for (Student s : Student.getStudentArray()) {
                 if (s != null && s.getRegNo() != null && s.getRegNo().contains(batchNumberOnly)) {
-                    String prf = (s.getPrfMarks() == -1) ? "ABSENT" : String.valueOf(s.getPrfMarks());
-                    String dbms = (s.getDbmsMarks() == -1) ? "ABSENT" : String.valueOf(s.getDbmsMarks());
+                   String prf = "";
+                    if (s.getPrfMarks() == -1) {
+                        prf = "ABSENT";
+                    } else if (s.getPrfMarks() == -2) {
+                        prf = "NOT CONDUCTED";
+                    } else {
+                        prf = String.valueOf(s.getPrfMarks());
+                    }
+
+                    String dbms = "";
+                    if (s.getDbmsMarks() == -1) {
+                        dbms = "ABSENT";
+                    } else if (s.getDbmsMarks() == -2) {
+                        dbms = "NOT CONDUCTED";
+                    } else {
+                        dbms = String.valueOf(s.getDbmsMarks());
+                    }
+
                     String gpa = String.format("%.2f", calculateGpa(s.getPrfMarks(), s.getDbmsMarks()));
 
                     Object[] row = {index++, s.getRegNo(), s.getName(), s.getNic(), prf, dbms, gpa};
