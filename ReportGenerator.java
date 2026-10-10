@@ -48,7 +48,7 @@ public class ReportGenerator extends JFrame {
         btnBatchWiseReport.setFocusPainted(false);
        
         btnBatchWiseReport.addActionListener(e -> {
-            new StudentRegistrationReport().setVisible(true);
+            new BatchWiseReport().setVisible(true);
             dispose();    
         });
         mainPanel.add(btnBatchWiseReport);
