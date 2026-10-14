@@ -35,7 +35,7 @@ public class ShowSuccessDbmsUpdate extends JFrame {
         
         btnBackHome.setFocusPainted(false);
         btnBackHome.addActionListener(e -> {
-            new StudentManagementSystem().setVisible(true);
+            new GradeManagement().setVisible(true);
             dispose();
         });
         mainPanel.add(btnBackHome);

@@ -1,5 +1,5 @@
-import javax.swing.*;
-import java.awt.*; 
+import java.awt.*;
+import javax.swing.*; 
 
 public class showSuccessAddStudent extends JFrame {
 
@@ -42,7 +42,7 @@ public class showSuccessAddStudent extends JFrame {
         btnBackHome.setBorder(BorderFactory.createLineBorder(new Color(60, 75, 150), 1));
 
         btnBackHome.addActionListener(e -> {
-            new studentHomepage().setVisible(true);
+            new StudentManagementSystem().setVisible(true);
             dispose();
         });
         mainPanel.add(btnBackHome);
