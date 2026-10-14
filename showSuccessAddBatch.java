@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class showSuccessAddBatch extends JFrame {
 
@@ -35,7 +35,7 @@ public class showSuccessAddBatch extends JFrame {
         btnBackHome.setFocusPainted(false);
         
         btnBackHome.addActionListener(e -> {
-            new StudentManagementSystem().setVisible(true);
+            new BatchManagementSystem().setVisible(true);
             dispose();
         });
         mainPanel.add(btnBackHome);

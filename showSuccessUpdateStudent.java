@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class showSuccessUpdateStudent extends JFrame {
 
@@ -35,7 +35,7 @@ public class showSuccessUpdateStudent extends JFrame {
         btnBackHome.setFocusPainted(false);
         
         btnBackHome.addActionListener(e -> {
-            new studentHomepage().setVisible(true);
+            new StudentManagementSystem().setVisible(true);
             dispose();
         });
         mainPanel.add(btnBackHome);
