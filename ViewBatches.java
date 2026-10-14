@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class ViewBatches extends JFrame {
@@ -55,7 +55,7 @@ public class ViewBatches extends JFrame {
         btnBackHome.setFocusPainted(false);
         
         btnBackHome.addActionListener(e -> {
-            new StudentManagementSystem().setVisible(true);
+            new BatchManagementSystem().setVisible(true);
             dispose();
         });
         mainPanel.add(btnBackHome);
