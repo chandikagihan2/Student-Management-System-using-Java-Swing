@@ -54,7 +54,7 @@ class Student{
     }
 
     public double getGPA() {
-        double prfGPA = 0.0; // Assuming PRF marks are out of 100
+        double prfGPA = 0.0;
         double dbmsGPA = 0.0;
 
         if (prfMarks >=0) {
